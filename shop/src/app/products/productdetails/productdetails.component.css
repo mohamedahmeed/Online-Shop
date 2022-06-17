@@ -1,0 +1,6 @@
+.second{
+    width: 200px !important;
+}
+.hov:hover{
+color: transparent !important;
+}

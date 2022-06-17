@@ -1,0 +1,25 @@
+
+
+
+    <div class="row main-banner ">
+        <div class="col-sm-12 col-md-12 col-lg-12 d-flex flex-row flex-wrap justify-content-center">
+            <div *ngFor="let item of carts">
+                <div class="card mx-2 my-2 text-center" style="width: 18rem;">
+                    <a routerLink="/product/{{item.Product_ID}}">
+                        <img src="/assets/images/{{item.image}}" class="card-img-top">
+                        
+                    </a>
+                    <div class="card-body">
+                        <h6 class="card-title">{{item.productName}}</h6>
+                        <p class="fs-3" style="color:orange;">{{item.totalPrice}} EGP</p>
+                        <a class="btn btn-danger" (click)="Delete(item)">
+                            delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+

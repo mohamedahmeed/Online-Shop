@@ -1,0 +1,94 @@
+ <div class="container main-banner">
+    <div *ngIf="flag" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    <form [formGroup]="p" class="  my-4">
+        <div class="mb-3">
+            <label for="name" class="form-label">Product Name</label>
+            <input [(ngModel)]="productName" formControlName="productName" type="text" class="form-control" id="name" aria-describedby="nameHelp">
+            <div *ngIf="!ProductNameerror.valid" id="nameHelp" class="form-text">{{ProductNameerror.errors|json}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="Description" class="form-label">Product Description</label>
+            <input [(ngModel)]="productDescription" formControlName="productDescription" type="text" class="form-control" id="Description" aria-describedby="DescriptionHelp">
+            <div *ngIf="!ProductDescriptionerror.valid" id="DescriptionHelp" class="form-text">{{ProductDescriptionerror.errors|json}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="price" class="form-label">Product price</label>
+            <input [(ngModel)]="productPrice" formControlName="productPrice" type="number" class="form-control" id="price" aria-describedby="priceHelp">
+            <div *ngIf="!ProductPriceerror.valid" id="priceHelp" class="form-text">{{ProductPriceerror.errors|json}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="discount" class="form-label">Product discount</label>
+            <input [(ngModel)]="discount" formControlName="discount" type="number" class="form-control" id="discount" aria-describedby="discountHelp">
+            <div *ngIf="!discounterror.valid" id="discountHelp" class="form-text">{{discounterror.errors|json}}</div>
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Product image</label>
+            <input [(ngModel)]="image" (change)="fileupload($event)" formControlName="image" type="file" class="form-control" id="image" aria-describedby="imageHelp">
+            <div *ngIf="!imageerror.valid" id="imageHelp" class="form-text">{{imageerror.errors|json}}</div>
+          </div>
+        <button (click)="add()"  type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div> 
+
+<!-- <div class="container main-banner">
+  <div *ngIf="flag" class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+    <div>
+        <form  [formGroup]="pro"  class="w-50" >
+            <div class="mb-3 ">
+                <label for="ProductName" class="form-label">Product Name</label>
+                <input [(ngModel)]="productName" 
+                formControlName="ProductName" name="ProductName" 
+                type="text" class="form-control" id="ProductName"
+                 aria-describedby="nameHelp">
+                 <div *ngIf="!ProductNameerror.valid" 
+                 id="nameHelp" class="form-text">{{ProductNameerror.errors|json}}</div>
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputDescription" class="form-label">ProductDescription</label>
+              <input [(ngModel)]="productDescription"  
+              formControlName="ProductDescription" name="Description" 
+              type="text" class="form-control" id="exampleInputDescription"
+               aria-describedby="DescriptionHelp">
+               <div *ngIf="!ProductDescriptionerror.valid" 
+               id="DescriptionHelp" class="form-text">{{ProductDescriptionerror.errors|json}}</div>
+            </div>
+            <div class="mb-3">
+              <label for="InputProductPrice" class="form-label">Product Price</label>
+              <input  [(ngModel)]="productPrice"  
+              formControlName="ProductPrice" name="ProductPrice" 
+              type="number" class="form-control" id="InputProductPrice"
+               aria-describedby="ProductPriceHelp">
+               <div *ngIf="!ProductPriceerror.valid" id="ProductPriceHelp" 
+               class="form-text">{{ProductPriceerror.errors|json}}</div>
+
+            </div>
+              <div class="mb-3">
+                <label for="InputDiscount" class="form-label">Discount</label>
+                <input [(ngModel)]="discount"   
+                formControlName="discount" name="Discount" 
+                type="number" class="form-control" id="InputDiscount"
+                 aria-describedby="DiscountHelp">
+            <div *ngIf="!discounterror.valid" id="DiscountHelp"
+             class="form-text">{{discounterror.errors|json}}</div>
+                
+            </div>
+            <div class="mb-3">
+                <label for="Image" class="form-label">Image</label>
+                <input  [(ngModel)]="image" formControlName="image" 
+                name="Image" type="file" class="form-control"
+                 id="Image" aria-describedby="imageHelp"> 
+            <div *ngIf="!imageerror.valid" id="imageHelp" 
+            class="form-text">{{imageerror.errors|json}}</div>
+                
+            </div>
+            <button (click)="onSubmit()"  type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>
+ -->

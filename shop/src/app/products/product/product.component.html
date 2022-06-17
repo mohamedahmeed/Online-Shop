@@ -1,0 +1,18 @@
+<app-slide></app-slide>
+ <div class="container main-banner">
+    <div class="row" >
+        <div class="col-lg-3 " *ngFor="let p of Product">
+            <div class="card m-3" style="width: 16rem;">
+                <img src="/assets/images/{{p.image}}" class="card-img-top m-3 w-100" alt="">
+                <div class="card-body">
+                  <h3 class="card-title">{{p.productName}}</h3>
+                  <h5 class="card-text">{{p.productDescription}}</h5>
+                  <p><span>$ </span>{{p.productPrice}}</p>
+                  <a (click)="Details(p)" ><i class="fa fa-eye fa-2x ml-2"></i></a>
+                  <a (click)="addtocart(p)" ><i class="fa fa-shopping-cart mx-5 fa-2x"></i></a>
+                  <a (click)="Delete(p)" ><i class="fa fa-trash fa-2x"></i></a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div> 

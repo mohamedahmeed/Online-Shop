@@ -1,0 +1,164 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="product">product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="addproduct">add product</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav> -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="assets/images/logo.png">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li class="scroll-to-section"><a href="#top" routerLink="home" >Home</a></li>
+                        <li class="scroll-to-section"><a routerLink="addproduct">add product</a></li>
+                        <li class="scroll-to-section">
+                            <button type="button" class="btn">
+                                <a routerLink="cart">cart</a>
+                                <div class="badge bg-danger">{{counter}}</div>
+                              </button>
+                            </li>
+                        <li class="scroll-to-section"><a routerLink="login">Log In</a></li>
+                        <li class="scroll-to-section"><a routerLink="register">Register</a></li>
+                        <li class="scroll-to-section"><a href="#explore">Explore</a></li>
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** 
+    <div class="main-banner" id="top">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="left-content">
+                      <div class="thumb">
+                          <div class="inner-content">
+                              <h4>We Are Hexashop</h4>
+                              <span>Awesome, clean &amp; creative HTML5 Template</span>
+                              <div class="main-border-button">
+                                  <a href="#">Purchase Now!</a>
+                              </div>
+                          </div>
+                          <img src="assets/images/left-banner-image.jpg" alt="">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="right-content">
+                      <div class="row">
+                          <div class="col-lg-6">
+                              <div class="right-first-image">
+                                  <div class="thumb">
+                                      <div class="inner-content">
+                                          <h4>Women</h4>
+                                          <span>Best Clothes For Women</span>
+                                      </div>
+                                      <div class="hover-content">
+                                          <div class="inner">
+                                              <h4>Women</h4>
+                                              <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                              <div class="main-border-button">
+                                                  <a href="#">Discover More</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <img src="assets/images/baner-right-image-01.jpg">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-6">
+                              <div class="right-first-image">
+                                  <div class="thumb">
+                                      <div class="inner-content">
+                                          <h4>Men</h4>
+                                          <span>Best Clothes For Men</span>
+                                      </div>
+                                      <div class="hover-content">
+                                          <div class="inner">
+                                              <h4>Men</h4>
+                                              <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                              <div class="main-border-button">
+                                                  <a href="#">Discover More</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <img src="assets/images/baner-right-image-02.jpg">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-6">
+                              <div class="right-first-image">
+                                  <div class="thumb">
+                                      <div class="inner-content">
+                                          <h4>Kids</h4>
+                                          <span>Best Clothes For Kids</span>
+                                      </div>
+                                      <div class="hover-content">
+                                          <div class="inner">
+                                              <h4>Kids</h4>
+                                              <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                              <div class="main-border-button">
+                                                  <a href="#">Discover More</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <img src="assets/images/baner-right-image-03.jpg">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-lg-6">
+                              <div class="right-first-image">
+                                  <div class="thumb">
+                                      <div class="inner-content">
+                                          <h4>Accessories</h4>
+                                          <span>Best Trend Accessories</span>
+                                      </div>
+                                      <div class="hover-content">
+                                          <div class="inner">
+                                              <h4>Accessories</h4>
+                                              <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                              <div class="main-border-button">
+                                                  <a href="#">Discover More</a>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <img src="assets/images/baner-right-image-04.jpg">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>-->
+  <!-- ***** Main Banner Area End ***** -->
